@@ -1,42 +1,62 @@
 <!-- TODO 1: Create the HTML Boilerplate -->
+
+<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Ji's Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Ji's Portfolio</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
-  <h1>This is Ji Zhou' space</h1>
-  <h2>I'm currently a UX/UI designer/UX Researcher </h2>
-  <hr />
-  <h3><a href="./public/UX-Research-Project-HW.html">UX Research for Huawei Aito Car</a></h3>
-  <img src="./assets/images/movie-ranking.png" height="200" alt="movie ranking project preview"/>
-  <h3><a href="./public/UXUI-BMW.html">UX UI design for BMW</a></h3>
-  <img src="./assets/images/birthday-invite.png" height="200" alt="birthday invite project preview"/>
-  <hr />
-  <h3><a href="./public/lsa-R.html">Data Analysis for OECD and NEPS</a></h3>
-  <img src="./assets/images/birthday-invite.png" height="200" alt="birthday invite project preview"/>
-  <hr />
-  <h3><a href="./public/Map-LeibnizPositionPost.html">a small project for mapping vacancies</a></h3>
-  <img src="./assets/images/birthday-invite.png" height="200" alt="birthday invite project preview"/>
-  <hr />
-  <a href="./public/about.html">About Me</a>
-  <a href="./public/contact.html">Contact Me</a>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="./public/about.html">About Me</a></li>
+                    <li><a href="./public/contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home">
+            <h1>Hi there! I am Ji, a</h1>
+            <h2>UX Researcher/Designer</h2>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3><a href="./public/UX-Research-Project-HW.html">UX Research: Huawei Aito Car</a></h3>
+                    <img src="./assets/images/IMG_0983.png" alt="Trust or not trust, this is the question">
+                </div>
+                <div class="project-card">
+                    <h3><a href="./public/UXUI-BMW.html">UX/UI design: BMW Navigation</a></h3>
+                    <img src="./assets/images/NaviPro.jpg" alt="UX UI design for BMW">
+                </div>
+                <div class="project-card">
+                    <h3><a href="./public/lsa-R.html">Data Analysis: OECD and NEPS</a></h3>
+                    <img src="./assets/images/PISA.jpg" alt="Data Analysis for OECD and NEPS">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me via email at <a href="mailto:ji.zhou@outlook.de">ji.zhou@outlook.de</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ji Zhou. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
-
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-<!-- TODO 4: Add titles/subtitles etc. -->
-
-<!-- TODO 5: Add a link to the project pages -->
-
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
-
-<!-- TODO 7: Add the Contact Me and About Me page links -->

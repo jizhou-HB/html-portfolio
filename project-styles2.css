@@ -1,0 +1,259 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: calc(100% - 40px);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 0px 20px; /* Added padding-top to account for the fixed header */
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    text-align: center; /* Center the section titles */
+}
+
+h3 {
+    margin-bottom: 0.5rem;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 2rem 0;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.detail-section {
+    text-align: left;
+}
+
+/* Home section */
+#home h1, #home h2 {
+    text-align: center;
+}
+
+/* Projects section */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 calc(33% - 20px); /* Responsive width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+    flex-grow: 1; /* Allows h3 to grow and take up available space */
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 300px; 
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure the images cover the area without distortion */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* About section */
+.about-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-summary {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-photo img {
+    border-radius: 50%;
+    width: 200px; /* Increased width */
+    height: 200px; /* Increased height */
+    object-fit: cover;
+    margin-left: auto; /* Push the image to the right */
+    margin-right: 0; /* Align the image more to the right */
+}
+
+.about-text {
+    max-width: 800px;
+    text-align: left;
+}
+
+.about-text h2 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.about-text p, .about-text ul {
+    margin-bottom: 1rem;
+}
+
+.about-text ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.about-text ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact section */
+#contact {
+    text-align: center;
+}
+
+.contact-summary {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.contact-details,
+.contact-form {
+    flex: 1;
+    padding: 1rem;
+}
+
+.contact-details {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #333;
+    color: #fff;
+}
