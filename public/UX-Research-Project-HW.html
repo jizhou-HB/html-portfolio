@@ -12,7 +12,7 @@
         <div class="container">
             <h1>Ji Zhou</h1>
             <nav>
-                <ul>
+                <ul id="navbar-links">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="#overview">Overview</a></li>
                     <li><a href="#detail1">Study 1</a></li>
@@ -20,6 +20,8 @@
                     <li><a href="#detail3">Study 3</a></li>
                     <li><a href="#Gallery">Design</a></li>
                 </ul>
+                <!-- Collapsible icon -->
+                <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
             </nav>
         </div>
     </header>
@@ -270,7 +272,18 @@
             ul.style.paddingLeft = '40px'; // Indent the list items
         });
 
+        function toggleNav() {
+        var x = document.getElementById("navbar-links");
+        if (x.className === "navbar-links") {
+            x.className += " responsive"; // Add "responsive" class to show menu
+        } else {
+            x.className = "navbar-links"; // Remove "responsive" class to hide menu
+        }
+    }
+    
+
     </script>
+
 
 </body>
 
