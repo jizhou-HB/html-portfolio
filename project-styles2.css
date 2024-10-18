@@ -68,6 +68,11 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
+.icon {
+    display: none;
+}
+
+
 .spaced-list {
     list-style-type: disc;
     padding-left: 20px;
@@ -269,8 +274,65 @@ html {
 }
 
 /* Responsive design for .overview-grid2 */
+
 @media (max-width: 768px) {
+    .overview-grid {
+        grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+    }
+    
     .overview-grid2 {
-        grid-template-columns: 1fr; /* Single column layout for small screens */
+        grid-template-columns: 1fr; /* Switch to single column for overview-grid2 as well */
+    }
+
+    .overview-grid .overview-tile:nth-child(4),
+    .overview-grid .overview-tile:nth-child(5) {
+        grid-column: span 1 / span 1; /* Reset column span on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-grid {
+        grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+    }
+    
+    .detail-grid2 {
+        grid-template-columns: 1fr; /* Switch to single column for overview-grid2 as well */
+    }
+
+    .detail-grid .overview-tile:nth-child(4),
+    .detail-grid .overview-tile:nth-child(5) {
+        grid-column: span 1 / span 1; /* Reset column span on smaller screens */
+    }
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    /* Hide navigation links by default and show only when clicked */
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Show the navigation links when the class "responsive" is added */
+    .navbar-links.responsive {
+        display: flex;
+    }
+
+    /* Show the hamburger icon for screens smaller than 768px */
+   
+    .icon {
+        display: block;
+        font-size: 30px;
+        color: white;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    /* Style the list items for mobile */
+    nav ul li {
+        margin: 10px 0;
     }
 }
