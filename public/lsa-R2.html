@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEPS project</title>
-    <link rel="stylesheet" href="../project-styles2.css">
+    <link rel="stylesheet" href="../stylenew.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <h1>Ji Zhou</h1>
+            <a href="../index.html" class="home-link"><h1>Ji Zhou</h1></a>
             <span class="icon" onclick="toggleNav()">☰</span> <!-- Menu icon for mobile -->
             <nav class="navbar-links">
                 <ul>
@@ -159,6 +159,12 @@
                 }
             });
         });
+        
+        function toggleNav() {
+            const navbarLinks = document.querySelector('.navbar-links');
+            navbarLinks.classList.toggle('responsive');
+        }
+    
     </script>
 </body>
 
