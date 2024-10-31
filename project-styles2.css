@@ -273,66 +273,58 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Responsive design for .overview-grid2 */
-
+/* Responsive design for grids and navigation at max-width 768px */
 @media (max-width: 768px) {
-    .overview-grid {
-        grid-template-columns: 1fr; /* Single-column layout for smaller screens */
-    }
-    
-    .overview-grid2 {
-        grid-template-columns: 1fr; /* Switch to single column for overview-grid2 as well */
+
+    /* Grid Layout Adjustments */
+    .overview-grid, .overview-grid2, .detail-grid, .detail-grid2 {
+        grid-template-columns: 1fr; /* Switch to single column */
     }
 
     .overview-grid .overview-tile:nth-child(4),
-    .overview-grid .overview-tile:nth-child(5) {
-        grid-column: span 1 / span 1; /* Reset column span on smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .detail-grid {
-        grid-template-columns: 1fr; /* Single-column layout for smaller screens */
-    }
-    
-    .detail-grid2 {
-        grid-template-columns: 1fr; /* Switch to single column for overview-grid2 as well */
-    }
-
+    .overview-grid .overview-tile:nth-child(5),
     .detail-grid .overview-tile:nth-child(4),
     .detail-grid .overview-tile:nth-child(5) {
-        grid-column: span 1 / span 1; /* Reset column span on smaller screens */
+        grid-column: span 1 / span 1; /* Reset column span */
     }
+
+    /* Navbar Responsive Adjustments */
+    /* Navigation styling */
+    .navbar-links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
 }
 
+    .navbar-links ul li a {
+    text-decoration: none;
+    color: black;
+}
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    /* Hide navigation links by default and show only when clicked */
+    /* Responsive styles */
+
+    /* Hide nav links and show the icon */
     .navbar-links {
         display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
     }
-
-    /* Show the navigation links when the class "responsive" is added */
+    
+    /* Show nav links when responsive class is added */
     .navbar-links.responsive {
         display: flex;
     }
 
-    /* Show the hamburger icon for screens smaller than 768px */
-   
+    /* Display the menu icon */
     .icon {
         display: block;
-        font-size: 30px;
-        color: white;
-        margin-right: 20px;
+        font-size: 24px;
         cursor: pointer;
+        color: black;
     }
-
-    /* Style the list items for mobile */
-    nav ul li {
-        margin: 10px 0;
-    }
+}
+/* Hide the icon by default on larger screens */
+.icon {
+    display: none;
 }
