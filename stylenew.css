@@ -66,6 +66,16 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
+ul {
+    padding-left: 20px; /* Adjust padding as needed */
+    margin-left: 0;
+    list-style-position: outside; /* Ensures bullets are outside content box */
+}
+
+li {
+    text-align: left; /* Ensures text is aligned left */
+}
+
 /* Menu icon for mobile */
 .icon {
     display: none;
@@ -97,14 +107,18 @@ h2 {
 }
 
 /* Overview and Detail Grid Styles */
-.overview-grid, .detail-grid {
+.detail-grid {
     display: grid;
     gap: 1rem;
     margin-top: 1rem;
+    grid-template-columns: 1fr 2fr 1fr; /* Default to 3 columns */
 }
 
 .overview-grid {
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
 }
 
 .overview-grid2, .detail-grid2 {
@@ -159,6 +173,27 @@ h2 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    font-size: 24px; /* Larger font size */
+    padding: 15px 20px; /* Increased padding for a larger clickable area */
+    background-color: rgb(89, 154, 172); /* Button color (blue in this example) */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensures it's above other elements */
+    transition: background-color 0.3s ease; /* Smooth color change */
+}
+
+#scroll-to-top:hover {
+    background-color: rgb(35, 61, 68); /* Darker shade on hover */
+}
+
 /* Footer Styles */
 footer {
     text-align: center;
@@ -190,7 +225,7 @@ html {
 
     /* Center content and limit width */
     .overview-grid .overview-tile, .detail-grid .overview-tile {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
 
