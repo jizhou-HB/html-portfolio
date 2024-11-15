@@ -245,6 +245,8 @@
         </section>
     </div>
 
+    <button id="scroll-to-top" title="Back to top">↑</button>
+
     <footer>
         <p>&copy; 2024 Ji Zhou. All rights reserved.</p>
     </footer>
@@ -283,6 +285,22 @@
         }
     }
     
+    // for scroll to top
+
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 
     </script>
 
